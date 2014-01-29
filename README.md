@@ -3,7 +3,7 @@ BeeMail
 
 Scratch pad for the BeeMail Project.  This Repo is a work in progress.
 
-This project is meant to be a "Hello World" for the Intel Gallileo board, although it may move platforms as time goes on.
+This project is meant to be my "Hello World" for the Intel Gallileo board, although it may move platforms as time goes on.
 
 It is based on Intel's resources ( http://www.intel.com/support/galileo/ ) as well has two SparkFun resources:
 
