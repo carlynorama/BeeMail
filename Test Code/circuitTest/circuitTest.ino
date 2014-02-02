@@ -29,8 +29,10 @@ THE SOFTWARE.
 //physical Arduino I/O is working. It checks a potentiometer or other
 //sensors on the AO PIN and equates it to the future number of mails
 //in the inbox. 
-
 //------------------------------------------------- OUTPUTS AND THEIR VARIABLES
+//the total number of bees bing controlled
+const int beeTotalNumber = 3;
+
 int beePins[beeTotalNumber] = {9, 10, 11 };
 
 //INPUTS AND THEIR VARIABLES
@@ -45,14 +47,6 @@ int maxBeeVar = 640;
 
 //how many different states the Bees can be in
 const int beeActivityLevels = 16;
-
-//the total number of bees bing controlled
-const int beeTotalNumber = 3;
-
-//the number of emails the bees hit maximum freakout.
-//ideally it should be divisible by the number of
-//beeActivityLevels
-int maxBeeVar = 640;
 
 //The area that dictates the 16 BeeActivityLevels.
 int b[beeActivityLevels][beeTotalNumber] =
@@ -99,7 +93,11 @@ void loop() {
 //---------------------------------------------------------------- updateBees()
 void updateBees(int v, int maxVal) {
   //ignore any values of V above maximum freakout level
-  v = min(v, maxVal);
+  // v = min(v, maxVal); does not work in Intel Galileo MacOS IDE
+  
+  if (v > maxVal) {
+    v = maxVal;
+  }
   
   //map the newly constrained V to the beeActivityLevel array
   //the top value is 1 less than the number than the array size
