@@ -29,6 +29,10 @@ THE SOFTWARE.
 //physical Arduino I/O is working. It checks a potentiometer or other
 //sensors on the AO PIN and equates it to the future number of mails
 //in the inbox. 
+//On each pin 9, 10 and 11 are 220 Ohm resistors leading to the bases of 
+//PN2222A transistors. The collector is attached to the motor and the 
+//emitter to ground. 
+
 //------------------------------------------------- OUTPUTS AND THEIR VARIABLES
 //the total number of bees bing controlled
 const int beeTotalNumber = 3;
@@ -43,7 +47,7 @@ int howManyNewEmails = 0;
 //the number of emails the bees hit maximum freakout.
 //ideally it should be divisible by the number of
 //beeActivityLevels
-int maxBeeVar = 640;
+int maxBeeVar = 1023;
 
 //how many different states the Bees can be in
 const int beeActivityLevels = 16;
