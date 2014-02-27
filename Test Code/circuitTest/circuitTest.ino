@@ -25,9 +25,9 @@ THE SOFTWARE.
 
 // ---------------------------------------------------------------- END LICENSE
 
-//This code is testing code for the circut to make sure all of the
+//This code is testing code for the circuit to make sure all of the
 //physical Arduino I/O is working. It checks a potentiometer or other
-//sensors on the AO PIN and equates it to the future number of mails
+//sensor on the AO PIN and equates it to the future number of mails
 //in the inbox. 
 //On each pin 9, 10 and 11 are 220 Ohm resistors leading to the bases of 
 //PN2222A transistors. The collector is attached to the motor and the 
